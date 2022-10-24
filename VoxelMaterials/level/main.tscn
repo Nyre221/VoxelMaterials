@@ -1,0 +1,1021 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://script/main.gd" type="Script" id=1]
+[ext_resource path="res://script/app_separator.gd" type="Script" id=2]
+[ext_resource path="res://materials/shape.tres" type="Material" id=3]
+[ext_resource path="res://level/World.tscn" type="PackedScene" id=4]
+[ext_resource path="res://level/tile_line.tscn" type="PackedScene" id=5]
+[ext_resource path="res://script/slider_number.gd" type="Script" id=6]
+[ext_resource path="res://level/roughness_slider.tscn" type="PackedScene" id=7]
+[ext_resource path="res://img/glass.png" type="Texture" id=8]
+[ext_resource path="res://level/metal_checkbox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://img/glass2.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.439216, 0.439216, 0.439216, 0.231373 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.576471, 0.576471, 0.576471, 0.368627 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.564706, 0.564706, 0.564706, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+anti_aliasing_size = 0.01
+
+[node name="main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+shape_material = ExtResource( 3 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.14902, 0.14902, 0.14902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="container" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="grid" type="VBoxContainer" parent="container"]
+margin_right = 240.0
+margin_bottom = 720.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tile_line1" parent="container/grid" instance=ExtResource( 5 )]
+margin_right = 240.0
+margin_bottom = 22.0
+tile_line = 32
+
+[node name="tile_line2" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 22.0
+margin_right = 240.0
+margin_bottom = 45.0
+tile_line = 31
+
+[node name="tile_line3" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 45.0
+margin_right = 240.0
+margin_bottom = 67.0
+tile_line = 30
+
+[node name="tile_line4" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 67.0
+margin_right = 240.0
+margin_bottom = 90.0
+tile_line = 29
+
+[node name="tile_line5" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 90.0
+margin_right = 240.0
+margin_bottom = 112.0
+tile_line = 28
+
+[node name="tile_line6" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 112.0
+margin_right = 240.0
+margin_bottom = 135.0
+tile_line = 27
+
+[node name="tile_line7" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 157.0
+tile_line = 26
+
+[node name="tile_line8" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 157.0
+margin_right = 240.0
+margin_bottom = 180.0
+tile_line = 25
+
+[node name="tile_line9" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 180.0
+margin_right = 240.0
+margin_bottom = 202.0
+tile_line = 24
+
+[node name="tile_line10" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 202.0
+margin_right = 240.0
+margin_bottom = 225.0
+tile_line = 23
+
+[node name="tile_line11" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 225.0
+margin_right = 240.0
+margin_bottom = 247.0
+tile_line = 22
+
+[node name="tile_line12" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 247.0
+margin_right = 240.0
+margin_bottom = 270.0
+tile_line = 21
+
+[node name="tile_line13" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 270.0
+margin_right = 240.0
+margin_bottom = 292.0
+tile_line = 20
+
+[node name="tile_line14" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 292.0
+margin_right = 240.0
+margin_bottom = 315.0
+tile_line = 19
+
+[node name="tile_line15" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 315.0
+margin_right = 240.0
+margin_bottom = 337.0
+tile_line = 18
+
+[node name="tile_line16" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 337.0
+margin_right = 240.0
+margin_bottom = 360.0
+tile_line = 17
+
+[node name="tile_line17" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 360.0
+margin_right = 240.0
+margin_bottom = 382.0
+tile_line = 16
+
+[node name="tile_line18" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 382.0
+margin_right = 240.0
+margin_bottom = 405.0
+tile_line = 15
+
+[node name="tile_line19" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 405.0
+margin_right = 240.0
+margin_bottom = 427.0
+tile_line = 14
+
+[node name="tile_line20" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 427.0
+margin_right = 240.0
+margin_bottom = 450.0
+tile_line = 13
+
+[node name="tile_line21" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 450.0
+margin_right = 240.0
+margin_bottom = 472.0
+tile_line = 12
+
+[node name="tile_line22" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 472.0
+margin_right = 240.0
+margin_bottom = 495.0
+tile_line = 11
+
+[node name="tile_line23" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 495.0
+margin_right = 240.0
+margin_bottom = 517.0
+tile_line = 10
+
+[node name="tile_line24" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 517.0
+margin_right = 240.0
+margin_bottom = 540.0
+tile_line = 9
+
+[node name="tile_line25" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 540.0
+margin_right = 240.0
+margin_bottom = 562.0
+tile_line = 8
+
+[node name="tile_line26" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 562.0
+margin_right = 240.0
+margin_bottom = 585.0
+tile_line = 7
+
+[node name="tile_line27" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 585.0
+margin_right = 240.0
+margin_bottom = 607.0
+tile_line = 6
+
+[node name="tile_line28" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 607.0
+margin_right = 240.0
+margin_bottom = 630.0
+tile_line = 5
+
+[node name="tile_line29" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 630.0
+margin_right = 240.0
+margin_bottom = 652.0
+tile_line = 4
+
+[node name="tile_line30" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 652.0
+margin_right = 240.0
+margin_bottom = 675.0
+tile_line = 3
+
+[node name="tile_line31" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 675.0
+margin_right = 240.0
+margin_bottom = 697.0
+tile_line = 2
+
+[node name="tile_line32" parent="container/grid" instance=ExtResource( 5 )]
+margin_top = 697.0
+margin_right = 240.0
+margin_bottom = 720.0
+tile_line = 1
+
+[node name="tile" parent="container/grid/tile_line32" index="0"]
+margin_bottom = 23.0
+
+[node name="tile2" parent="container/grid/tile_line32" index="1"]
+margin_bottom = 23.0
+
+[node name="tile3" parent="container/grid/tile_line32" index="2"]
+margin_bottom = 23.0
+
+[node name="tile4" parent="container/grid/tile_line32" index="3"]
+margin_bottom = 23.0
+
+[node name="tile5" parent="container/grid/tile_line32" index="4"]
+margin_bottom = 23.0
+
+[node name="tile6" parent="container/grid/tile_line32" index="5"]
+margin_bottom = 23.0
+
+[node name="tile7" parent="container/grid/tile_line32" index="6"]
+margin_bottom = 23.0
+
+[node name="tile8" parent="container/grid/tile_line32" index="7"]
+margin_bottom = 23.0
+
+[node name="app_separator" type="ColorRect" parent="container"]
+visible = false
+margin_left = 244.0
+margin_right = 245.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 1, 0 )
+size_flags_vertical = 3
+color = Color( 0.364706, 0.364706, 0.364706, 1 )
+script = ExtResource( 2 )
+
+[node name="info" type="VBoxContainer" parent="container"]
+margin_left = 244.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator2" type="HSeparator" parent="container/info"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1036.0
+margin_bottom = 4.0
+
+[node name="header" type="HBoxContainer" parent="container/info"]
+margin_top = 8.0
+margin_right = 1036.0
+margin_bottom = 33.0
+alignment = 1
+
+[node name="VSeparator3" type="VSeparator" parent="container/info/header"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 4.0
+margin_bottom = 25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="index_label" type="Label" parent="container/info/header"]
+margin_left = 8.0
+margin_top = 5.0
+margin_right = 70.0
+margin_bottom = 19.0
+text = "_Number:"
+
+[node name="number" type="Label" parent="container/info/header"]
+margin_left = 74.0
+margin_top = 5.0
+margin_right = 946.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "0"
+clip_text = true
+
+[node name="clear_all" type="Button" parent="container/info/header"]
+margin_left = 950.0
+margin_right = 1030.11
+margin_bottom = 25.0
+rect_min_size = Vector2( 80.113, 25 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "_Clear"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="container/info/header"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1034.0
+margin_right = 1036.0
+margin_bottom = 25.0
+custom_constants/separation = 2
+
+[node name="HSeparator6" type="HSeparator" parent="container/info"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 37.0
+margin_right = 1036.0
+margin_bottom = 37.0
+custom_constants/separation = 0
+
+[node name="HSeparator" type="HSeparator" parent="container/info"]
+margin_top = 41.0
+margin_right = 1036.0
+margin_bottom = 45.0
+
+[node name="metal" type="HBoxContainer" parent="container/info"]
+margin_top = 49.0
+margin_right = 1036.0
+margin_bottom = 73.0
+size_flags_vertical = 0
+
+[node name="metal_checkbox" parent="container/info/metal" instance=ExtResource( 9 )]
+text = "_Metallic"
+
+[node name="metal_number" type="Label" parent="container/info/metal"]
+margin_left = 104.0
+margin_top = 1.0
+margin_right = 1022.0
+margin_bottom = 23.0
+mouse_filter = 1
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 1 )
+text = "[]"
+clip_text = true
+
+[node name="VSeparator" type="VSeparator" parent="container/info/metal"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1026.0
+margin_right = 1036.0
+margin_bottom = 24.0
+custom_constants/separation = 10
+
+[node name="emissive" type="HBoxContainer" parent="container/info"]
+margin_top = 77.0
+margin_right = 1036.0
+margin_bottom = 101.0
+size_flags_vertical = 0
+
+[node name="emissive_checkbox" parent="container/info/emissive" instance=ExtResource( 9 )]
+text = "_Emissive"
+
+[node name="emissive_number" type="Label" parent="container/info/emissive"]
+margin_left = 104.0
+margin_top = 1.0
+margin_right = 1022.0
+margin_bottom = 23.0
+mouse_filter = 1
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 1 )
+text = "[]"
+clip_text = true
+
+[node name="VSeparator2" type="VSeparator" parent="container/info/emissive"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1026.0
+margin_right = 1036.0
+margin_bottom = 24.0
+custom_constants/separation = 10
+
+[node name="glass" type="HBoxContainer" parent="container/info"]
+margin_top = 105.0
+margin_right = 1036.0
+margin_bottom = 129.0
+size_flags_vertical = 0
+
+[node name="glass_checkbox" parent="container/info/glass" instance=ExtResource( 9 )]
+text = "_Glass"
+
+[node name="glass_number" type="Label" parent="container/info/glass"]
+margin_left = 104.0
+margin_top = 1.0
+margin_right = 1022.0
+margin_bottom = 23.0
+mouse_filter = 1
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 1 )
+text = "[]"
+clip_text = true
+
+[node name="VSeparator2" type="VSeparator" parent="container/info/glass"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1026.0
+margin_right = 1036.0
+margin_bottom = 24.0
+custom_constants/separation = 10
+
+[node name="roughness" type="HBoxContainer" parent="container/info"]
+margin_top = 133.0
+margin_right = 1036.0
+margin_bottom = 163.0
+
+[node name="VSeparator3" type="VSeparator" parent="container/info/roughness"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 4.0
+margin_bottom = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="roughness_label" type="Label" parent="container/info/roughness"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 83.0
+margin_bottom = 22.0
+text = "_Roughness"
+
+[node name="roughness_slider" parent="container/info/roughness" instance=ExtResource( 7 )]
+margin_left = 87.0
+margin_right = 509.0
+rounded = true
+
+[node name="VSeparator" type="VSeparator" parent="container/info/roughness"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 513.0
+margin_right = 513.0
+margin_bottom = 30.0
+custom_constants/separation = 0
+
+[node name="slider_number" type="SpinBox" parent="container/info/roughness"]
+margin_left = 517.0
+margin_right = 591.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 40, 0 )
+align = 1
+script = ExtResource( 6 )
+
+[node name="VSeparator2" type="VSeparator" parent="container/info/roughness"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 595.0
+margin_right = 595.0
+margin_bottom = 30.0
+custom_constants/separation = 0
+
+[node name="roughness_number" type="Label" parent="container/info/roughness"]
+margin_left = 599.0
+margin_top = 4.0
+margin_right = 1022.0
+margin_bottom = 26.0
+mouse_filter = 1
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 1 )
+text = "[]"
+clip_text = true
+
+[node name="VSeparator5" type="VSeparator" parent="container/info/roughness"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1026.0
+margin_right = 1036.0
+margin_bottom = 30.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator4" type="HSeparator" parent="container/info"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 167.0
+margin_right = 1036.0
+margin_bottom = 171.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="container/info"]
+margin_top = 175.0
+margin_right = 1036.0
+margin_bottom = 676.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="container/info/ViewportContainer"]
+size = Vector2( 1036, 501 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="World" parent="container/info/ViewportContainer/Viewport" instance=ExtResource( 4 )]
+
+[node name="HSeparator5" type="HSeparator" parent="container/info"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 680.0
+margin_right = 1036.0
+margin_bottom = 680.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bottom_button" type="Panel" parent="container/info"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 684.0
+margin_right = 1036.0
+margin_bottom = 714.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="container" type="HBoxContainer" parent="container/info/bottom_button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator4" type="VSeparator" parent="container/info/bottom_button/container"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 4.0
+margin_bottom = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="export" type="Label" parent="container/info/bottom_button/container"]
+margin_left = 11.0
+margin_top = 8.0
+margin_right = 70.0
+margin_bottom = 22.0
+text = "_Export:"
+uppercase = true
+
+[node name="VSeparator3" type="VSeparator" parent="container/info/bottom_button/container"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 77.0
+margin_right = 77.0
+margin_bottom = 30.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="export_metal" type="Button" parent="container/info/bottom_button/container"]
+margin_left = 84.0
+margin_right = 154.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 70, 0 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "_Metal"
+
+[node name="export_emission" type="Button" parent="container/info/bottom_button/container"]
+margin_left = 161.0
+margin_right = 231.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 70, 0 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "_Emissive"
+
+[node name="export_glass" type="Button" parent="container/info/bottom_button/container"]
+margin_left = 238.0
+margin_right = 308.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 70, 0 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "_Glass"
+
+[node name="export_roughness" type="Button" parent="container/info/bottom_button/container"]
+margin_left = 315.0
+margin_right = 394.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 70, 0 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "_Roughness"
+
+[node name="current_mapping" type="Button" parent="container/info/bottom_button/container"]
+margin_left = 401.0
+margin_right = 494.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 70, 0 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "_Mapping(.txt)"
+
+[node name="VSeparator6" type="VSeparator" parent="container/info/bottom_button/container"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 501.0
+margin_right = 794.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_constants/separation = 220
+
+[node name="import" type="Label" parent="container/info/bottom_button/container"]
+margin_left = 801.0
+margin_top = 8.0
+margin_right = 862.0
+margin_bottom = 22.0
+text = "_Import:"
+uppercase = true
+
+[node name="VSeparator" type="VSeparator" parent="container/info/bottom_button/container"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 869.0
+margin_right = 869.0
+margin_bottom = 30.0
+custom_constants/separation = 0
+
+[node name="import_palette" type="Button" parent="container/info/bottom_button/container"]
+margin_left = 876.0
+margin_right = 946.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 70, 0 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "_Palette"
+
+[node name="import_mapping" type="Button" parent="container/info/bottom_button/container"]
+margin_left = 953.0
+margin_right = 1023.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 70, 0 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "_Mapping"
+
+[node name="VSeparator2" type="VSeparator" parent="container/info/bottom_button/container"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1030.0
+margin_right = 1036.0
+margin_bottom = 30.0
+custom_constants/separation = 6
+
+[node name="HSeparator3" type="HSeparator" parent="container/info"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 718.0
+margin_right = 1036.0
+margin_bottom = 720.0
+custom_constants/separation = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stop" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+color = Color( 0, 0, 0, 0.694118 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PaletteDialog" type="FileDialog" parent="." groups=["dialog"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 237.0
+margin_top = 145.0
+margin_right = -305.0
+margin_bottom = -138.0
+popup_exclusive = true
+window_title = "Open a File"
+resizable = true
+dialog_text = "_Palette"
+mode = 0
+access = 2
+filters = PoolStringArray( "*.png" )
+current_dir = "/home/nyre/Documenti/godot/VoxelMaterials"
+current_path = "/home/nyre/Documenti/godot/VoxelMaterials/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="import_map_Dialog" type="FileDialog" parent="." groups=["dialog"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 237.0
+margin_top = 145.0
+margin_right = -305.0
+margin_bottom = -138.0
+popup_exclusive = true
+window_title = "Open a File"
+resizable = true
+dialog_text = "_Mapping"
+mode = 0
+access = 2
+filters = PoolStringArray( "*.txt" )
+current_dir = "/home/nyre/Documenti/godot/VoxelMaterials"
+current_path = "/home/nyre/Documenti/godot/VoxelMaterials/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Save_map_Dialog" type="FileDialog" parent="." groups=["dialog"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 237.0
+margin_top = 145.0
+margin_right = -305.0
+margin_bottom = -138.0
+popup_exclusive = true
+resizable = true
+dialog_text = "_Mapping"
+access = 2
+filters = PoolStringArray( "*.txt" )
+current_dir = "/home/nyre/Documenti/godot/VoxelMaterials"
+current_path = "/home/nyre/Documenti/godot/VoxelMaterials/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MetalDialog" type="FileDialog" parent="." groups=["dialog"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 237.0
+margin_top = 145.0
+margin_right = -305.0
+margin_bottom = -138.0
+popup_exclusive = true
+resizable = true
+dialog_text = "_Metal"
+access = 2
+filters = PoolStringArray( "*.png" )
+current_dir = "/home/nyre/Documenti/godot/VoxelMaterials"
+current_path = "/home/nyre/Documenti/godot/VoxelMaterials/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EmissiveDialog" type="FileDialog" parent="." groups=["dialog"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 237.0
+margin_top = 145.0
+margin_right = -305.0
+margin_bottom = -138.0
+popup_exclusive = true
+resizable = true
+dialog_text = "_Emissive"
+access = 2
+filters = PoolStringArray( "*.png" )
+current_dir = "/home/nyre/Documenti/godot/VoxelMaterials"
+current_path = "/home/nyre/Documenti/godot/VoxelMaterials/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GlassDialog" type="FileDialog" parent="." groups=["dialog"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 237.0
+margin_top = 145.0
+margin_right = -305.0
+margin_bottom = -138.0
+popup_exclusive = true
+resizable = true
+dialog_text = "_Glass"
+access = 2
+current_dir = "/home/nyre/Documenti/godot/VoxelMaterials"
+current_path = "/home/nyre/Documenti/godot/VoxelMaterials/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoughnessDialog" type="FileDialog" parent="." groups=["dialog"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 237.0
+margin_top = 145.0
+margin_right = -305.0
+margin_bottom = -138.0
+popup_exclusive = true
+resizable = true
+dialog_text = "_Roughness"
+access = 2
+filters = PoolStringArray( "*.png" )
+current_dir = "/home/nyre/Documenti/godot/VoxelMaterials"
+current_path = "/home/nyre/Documenti/godot/VoxelMaterials/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="glass_confirmation" type="ConfirmationDialog" parent="."]
+margin_left = 153.0
+margin_top = 38.0
+margin_right = 1206.0
+margin_bottom = 650.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="glass_confirmation"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -36.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="glass_confirmation/VBoxContainer"]
+margin_right = 1037.0
+margin_bottom = 164.0
+size_flags_vertical = 3
+text = "_note"
+
+[node name="TabContainer" type="TabContainer" parent="glass_confirmation/VBoxContainer"]
+margin_top = 168.0
+margin_right = 1037.0
+margin_bottom = 568.0
+rect_min_size = Vector2( 0, 400 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="glass_confirmation/VBoxContainer/TabContainer/img"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img2" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="glass_confirmation/VBoxContainer/TabContainer/img2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="glass_confirmation/VBoxContainer/TabContainer/1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "_method_1"
+autowrap = true
+
+[node name="2" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="glass_confirmation/VBoxContainer/TabContainer/2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "_method_2"
+autowrap = true
+
+[connection signal="palette_loaded" from="." to="container/grid/tile_line32/tile" method="_on_main_palette_loaded"]
+[connection signal="mouse_entered" from="container/app_separator" to="container/app_separator" method="_on_app_separator_mouse_entered"]
+[connection signal="button_down" from="container/info/header/clear_all" to="." method="_on_clear_all_button_down"]
+[connection signal="selected" from="container/info/metal/metal_checkbox" to="." method="_on_metal_checkbox_selected"]
+[connection signal="selected" from="container/info/emissive/emissive_checkbox" to="." method="_on_emissive_checkbox_selected"]
+[connection signal="selected" from="container/info/glass/glass_checkbox" to="." method="_on_glass_checkbox_selected"]
+[connection signal="value_changed" from="container/info/roughness/roughness_slider" to="container/info/roughness/slider_number" method="_on_roughness_slider_value_changed"]
+[connection signal="value_selected" from="container/info/roughness/roughness_slider" to="." method="_on_roughness_slider_value_selected"]
+[connection signal="value_changed" from="container/info/roughness/slider_number" to="container/info/roughness/roughness_slider" method="_on_slider_number_value_changed"]
+[connection signal="button_down" from="container/info/bottom_button/container/export_metal" to="." method="_on_export_metal_button_down"]
+[connection signal="button_down" from="container/info/bottom_button/container/export_emission" to="." method="_on_export_emission_button_down"]
+[connection signal="button_down" from="container/info/bottom_button/container/export_glass" to="." method="_on_export_glass_button_down"]
+[connection signal="button_down" from="container/info/bottom_button/container/export_roughness" to="." method="_on_export_roughness_button_down"]
+[connection signal="button_down" from="container/info/bottom_button/container/current_mapping" to="." method="_on_current_mapping_button_down"]
+[connection signal="pressed" from="container/info/bottom_button/container/import_palette" to="." method="_on_import_palette_pressed"]
+[connection signal="button_down" from="container/info/bottom_button/container/import_mapping" to="." method="_on_import_mapping_button_down"]
+[connection signal="file_selected" from="PaletteDialog" to="." method="_on_PaletteDialog_file_selected"]
+[connection signal="hide" from="PaletteDialog" to="." method="_on_PaletteDialog_hide"]
+[connection signal="file_selected" from="import_map_Dialog" to="." method="_on_import_map_Dialog_file_selected"]
+[connection signal="file_selected" from="Save_map_Dialog" to="." method="_on_Save_map_Dialog_file_selected"]
+[connection signal="file_selected" from="MetalDialog" to="." method="_on_MetalDialog_file_selected"]
+[connection signal="file_selected" from="EmissiveDialog" to="." method="_on_EmissiveDialog_file_selected"]
+[connection signal="file_selected" from="GlassDialog" to="." method="_on_GlassDialog_file_selected"]
+[connection signal="file_selected" from="RoughnessDialog" to="." method="_on_RoughnessDialog_file_selected"]
+[connection signal="confirmed" from="glass_confirmation" to="." method="_on_glass_confirmation_confirmed"]
+
+[editable path="container/grid/tile_line32"]
