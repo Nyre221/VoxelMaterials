@@ -6,5 +6,5 @@ VoxelMaterials is a program that I created, initially just for me, to easily gen
 
 VoxelMaterials is based on godot 3.3.4.
 
-##You can download the release version on itch:
-##https://nyre221.itch.io/voxelmaterials
+#You can download the release version on itch:
+#https://nyre221.itch.io/voxelmaterials
