@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://level/tile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://script/tile_line.gd" type="Script" id=2]
+
+[node name="tile_line" type="HBoxContainer"]
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tile" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 30.0
+margin_bottom = 20.0
+tile_number = 1
+
+[node name="tile2" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 30.0
+margin_right = 60.0
+margin_bottom = 20.0
+tile_number = 2
+
+[node name="tile3" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 60.0
+margin_right = 90.0
+margin_bottom = 20.0
+tile_number = 3
+
+[node name="tile4" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 90.0
+margin_right = 120.0
+margin_bottom = 20.0
+tile_number = 4
+
+[node name="tile5" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 120.0
+margin_right = 150.0
+margin_bottom = 20.0
+tile_number = 5
+
+[node name="tile6" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 150.0
+margin_right = 180.0
+margin_bottom = 20.0
+tile_number = 6
+
+[node name="tile7" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 180.0
+margin_right = 210.0
+margin_bottom = 20.0
+tile_number = 7
+
+[node name="tile8" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 210.0
+margin_right = 240.0
+margin_bottom = 20.0
+tile_number = 8
