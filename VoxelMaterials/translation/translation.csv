@@ -20,7 +20,7 @@ Se vuoi ottenere qualcosa con riflessi simile a quelli del vero vetro, questa no
 
 Usando questo metodo puoi ottenere semplici trasparenze senza dover utilizzare blender o dover creare un modello 3d separato per il vetro.
 
-Di seguito sono riportati due modi per utilizzare queste immagini con Godot 3:","NOTE: This glass map is not a true material map.
+Di seguito è scritto un modo per usare questo metodo con Godot 3:","NOTE: This glass map is not a true texture map.
 
 This export option creates two images: one without the glass areas and one with only the glass.
 
@@ -28,57 +28,16 @@ If you want to get something with reflections similar to those of real glass, th
 
 By using this method you can get simple transparencies without having to use blender or having to create a separate 3d model for the glass.
 
-Below there are written two ways to use these images with Godot 3:"
-_method_1,"Ricorda:
-1) Con questo metodo il modello 3d non può essere visto nei riflessi se usi il nodo Reflection Probe.
-2) Con il secondo metodo è possibile avere il riflesso di questo modello 3d su altri oggetti, ma non ci sono le ombre.
-3) Con questo metodo puoi ottenere i riflessi sul vetro solo se usi un Reflection Probe.
+Below is written a way to use this method with Godot 3:"
+_method_1,"Nota:
+Con questo metodo puoi ottenere i riflessi sul vetro solo se usi un Reflection Probe.
 
 
 
 1) inserisci il tuo modello nella mappa.
 2) crea un nuovo spatial material.
-3) nella scheda parametri impostare cull-mode (disabled), depth draw mode (Opaque pre-pass) e abilita Use-Alpha-Scissor.
-4) andare su Albledo e inserire l'immagine senza vetro (glass_less.png).
-5) andare nella sezione Material che si trova nella parte bassa e selezionare NextPass.
-6) creare un nuovo spatial material.
-7) su Flags selezionare trasparente.
-8) andare su Albedo ed inserire l'immagine che ha solo i vetri (Glass_only.png).
-9) modificare la trasparenza cambiando il valore alfa nella sezione albedo.
-
-Se questo è stato fatto correttamente il modello 3d dovrebbe apparire con le trasparenze.
-Puoi cambiare l'effetto della luce modificando la metallicità e ruvidezza nelle impostazioni del materiale.","Remember:
-1) With this method the 3d model cannot be seen in the reflections if you use the Reflection Probe node.
-2) With the second method it is possible to have the reflection of this 3d model on other objects, but there are no shadows.
-3) With this method you can get the reflections on the glass only if you use a Reflection Probe.
-
-
-
-1) add your 3d model in the map.
-2) create a new spatial material.
-3) in the parameters tab set cull-mode (disabled), depth draw mode (Opaque pre-pass) and enable Use-Alpha-Scissor.
-4) go to Albledo and add the image without glass (glass_less.png).
-5) go to the Material section at the bottom and select NextPass.
-6) create a new spatial material.
-7) in the Flags section enable transparent.
-8) go to Albedo and add the image that only has glasses (Glass_only.png).
-9) modify the transparency by changing the alpha value in the albedo section.
-
-
-If this has been done correctly the 3d model should appear with transparencies.
-You can change the effect of the light by changing the metallicity and roughness in the material settings."
-_method_2,"Ricorda:
-1) Con questo metodo le ombre non ci sono.
-2) Con il primo metodo è possibile avere le ombre.
-3) Con questo metodo puoi ottenere i riflessi sul vetro solo se usi un Reflection Probe.
-
-
-
-1) inserisci il tuo modello nella mappa.
-2) crea un nuovo spatial material.
-3) nella scheda Flags abilita la trasparenza.
-4) nella scheda parametri imposta cull-mode (disabled) e abilita Use-Alpha-Scissor.
-5) andare su Albledo e inserire l'immagine senza vetro (glass_less.png).
+2) nella scheda parametri imposta cull-mode (disabled) e abilita Use-Alpha-Scissor.
+5) andare su Albledo e inserire l'immagine senza vetro (glass_less.png)
 6) andare nella sezione Material che si trova nella parte bassa e selezionare NextPass.
 7) creare un nuovo spatial material.
 8) su Flags selezionare trasparente.
@@ -86,23 +45,21 @@ _method_2,"Ricorda:
 10) modificare la trasparenza cambiando il valore alfa nella sezione albedo.
 
 Se questo è stato fatto correttamente il modello 3d dovrebbe apparire con le trasparenze.
-Puoi cambiare l'effetto della luce modificando la metallicità e ruvidezza nelle impostazioni del materiale.","Remember:
-1) With this method there are no shadows.
-2) With the first method it is possible to have shadows.
-3) With this method you can get the reflections on the glass only if you use a Reflection Probe.
+Puoi cambiare l'effetto della luce modificando la metallicità e ruvidezza nelle impostazioni del materiale.","Note:
+With this method you can get the reflections on the glass only if you use a Reflection Probe.
 
 
 
 1) add your model to the map.
 2) create a new spatial material.
-3) in the Flags tab enable transparency.
-4) in the parameters tab set cull-mode (disabled) and enable Use-Alpha-Scissor.
+3) in the parameters tab set cull-mode (disabled) and enable Use-Alpha-Scissor.
 5) go to Albledo and insert the image without glass (glass_less.png).
 6) go to the Material section at the bottom and select NextPass.
 7) create a new spatial material.
 8) on Flags select transparent.
-9) go to Albedo and insert the image that has only the glasses (Glass_only.png).
+9) go to Albedo and add the image that has only the glass (Glass_only.png).
 10) modify the transparency by changing the alpha value in the albedo section.
 
 If this has been done correctly the 3d model should appear with transparencies.
 You can change the effect of the light by changing the metallicity and roughness in the material settings."
+_method_2,,

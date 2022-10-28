@@ -877,9 +877,6 @@ margin_left = 153.0
 margin_top = 38.0
 margin_right = 1206.0
 margin_bottom = 650.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="glass_confirmation"]
 anchor_right = 1.0
@@ -888,9 +885,6 @@ margin_left = 8.0
 margin_top = 8.0
 margin_right = -8.0
 margin_bottom = -36.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="text" type="Label" parent="glass_confirmation/VBoxContainer"]
 margin_right = 1037.0
@@ -909,7 +903,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="#" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="glass_confirmation/VBoxContainer/TabContainer/#"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "_method_1"
+autowrap = true
+
 [node name="img" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -926,9 +940,6 @@ anchor_bottom = 1.0
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="img2" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
 visible = false
@@ -951,46 +962,6 @@ stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="1" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="text" type="Label" parent="glass_confirmation/VBoxContainer/TabContainer/1"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "_method_1"
-autowrap = true
-
-[node name="2" type="Tabs" parent="glass_confirmation/VBoxContainer/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="text" type="Label" parent="glass_confirmation/VBoxContainer/TabContainer/2"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "_method_2"
-autowrap = true
 
 [connection signal="palette_loaded" from="." to="container/grid/tile_line32/tile" method="_on_main_palette_loaded"]
 [connection signal="mouse_entered" from="container/app_separator" to="container/app_separator" method="_on_app_separator_mouse_entered"]
